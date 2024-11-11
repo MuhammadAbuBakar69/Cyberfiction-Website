@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div id="nav">
+        <h3><b>CYBER</b>FICTION*</h3>
+        <button>November,2024</button>
+    </div>
+    <div id="main">
+        <div id="page">
+            <div id="loop">
+                <h1><b>CYBER</b>FICTION IS THE <b><i>REAL</i></b> <span>STORY</span> IN THE <span><i>METAVERSE.</i></span></h1>
+                <h1><b>CYBER</b>FICTION IS THE <b><i>REAL</i></b> <span>STORY</span> IN THE <span><i>METAVERSE.</i></span></h1>
+                <h1><b>CYBER</b>FICTION IS THE <b><i>REAL</i></b> <span>STORY</span> IN THE <span><i>METAVERSE.</i></span></h1>
+            </div>
+            <h3>CYBERFICTION AIMS TO BE A DECENTRALIZED COMMUNITY THAT CAN <br> CREATE NEW VALUES AND PROFITS THROUGH PLAY IN THE VIRTUAL <br> WORLD.</h3>
+            <h4>...SCROLL TO READ</h4>
+            <canvas></canvas>
+        </div>
+        <div id="page1">
+            <div id="right-text">
+                <h3>CYBERFICTION / KEY WORD</h3>
+                <h1>HAVE FUN
+                    <br>
+                    LET'S PLAY
+                    <br>
+                    JUST BE TOGETHER</h1>
+            </div>
+            <div id="left-text">
+                <h1>MAKE A STORY
+                    <br>
+                    TAKE A CHANCE
+                    <br>
+                    BUILD AND OWNED</h1>
+                    <h3>..AND MAINTAIN GOOD HUMANITY</h3>
+            </div>
+        </div>
+        <div id="page2">
+            <div id="text1">
+                <h3>CYBERFICTION / HAVE FUN</h3>
+                <h1>LET'S
+                    <br>
+                    HAVE FUN
+                    <br>
+                    TOGETHER</h1>
+            </div>
+            <div id="text2">
+                <p>LET'S HAVE A BLAST! LET'S JUST THROW AWAY AGE, GENDER, REGION, <br> STATUS, ETC., DON'T COMPETE, DON'T FIGHT, COOPERATE AND SHARE <br> WITH EACH OTHER AND ENJOY IT TOGETHER! SO THAT YOU CAN STAND <br> THERE IN THE NOT-TOO-DISTANT FUTURE AND DREAM OF ANOTHER NEW <br> FUTURE</p>
+            </div>
+        </div>
+        <div id="page3">
+            <div id="text3">
+                <h3>CYBERFICTION / PLAYGROUND</h3>
+                <h1>
+
+CYBERFIELD
+<br>
+IS OUR
+<br>
+PLAYGROUND
+                </h1>
+               
+            </div>
+        </div>
+        <style>
+            :root {
+                --primary-color: #1a1c23;
+                --secondary-color: #3498db;
+                --accent-color: #e74c3c;
+                --text-color: #ecf0f1;
+                --hover-color: #e74c3c;
+                --gradient-start: #2980b9;
+                --gradient-end: #3498db;
+            }
+    
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+    
+            .footer {
+               
+                color: var(--text-color);
+                padding: 4rem 0 0 0;
+                position: relative;
+                overflow: hidden;
+                background-color: #1b1919;
+            }
+    
+            .footer::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            }
+    
+            .footer-content {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 0 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 2rem;
+            }
+    
+            .footer-section {
+                padding: 1rem;
+                position: relative;
+                z-index: 1;
+            }
+    
+            .footer-section h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+                position: relative;
+                display: inline-block;
+            }
+    
+            .footer-section h3::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.3s ease;
+            }
+    
+            .footer-section:hover h3::before {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+    
+            .footer-links {
+                display: grid;
+                gap: 0.8rem;
+            }
+    
+            .footer-links li {
+                list-style: none;
+                transition: transform 0.3s ease;
+            }
+    
+            .footer-links a {
+                color: var(--text-color);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                padding-left: 0;
+            }
+    
+            .footer-links a:hover {
+                padding-left: 10px;
+                color: var(--secondary-color);
+            }
+    
+            .footer-links a::before {
+                content: '→';
+                position: absolute;
+                left: -20px;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+    
+            .footer-links a:hover::before {
+                left: -10px;
+                opacity: 1;
+            }
+    
+            .contact-info {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+                padding: 0.5rem;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+    
+            .contact-info:hover {
+                background: rgba(255, 255, 255, 0.1);
+                transform: translateX(10px);
+            }
+    
+            .contact-info i {
+                margin-right: 10px;
+                color: var(--secondary-color);
+                transition: transform 0.3s ease;
+            }
+    
+            .contact-info:hover i {
+                transform: scale(1.2);
+            }
+    
+            .social-links {
+                display: flex;
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+    
+            .social-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+                color: white;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+    
+            .social-link::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, var(--accent-color), var(--hover-color));
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+    
+            .social-link:hover {
+                transform: translateY(-5px) rotate(360deg);
+            }
+    
+            .social-link:hover::before {
+                opacity: 1;
+            }
+    
+            .social-link i {
+                position: relative;
+                z-index: 1;
+            }
+    
+            .newsletter-form {
+                display: flex;
+                gap: 10px;
+                margin-top: 1rem;
+                position: relative;
+            }
+    
+            .newsletter-form input {
+                flex: 1;
+                padding: 0.8rem;
+                border: none;
+                border-radius: 25px;
+                outline: none;
+                background: rgba(255, 255, 255, 0.1);
+                color: white;
+                transition: all 0.3s ease;
+            }
+    
+            .newsletter-form input:focus {
+                background: rgba(255, 255, 255, 0.2);
+                box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+            }
+    
+            .newsletter-form button {
+                padding: 0.8rem 1.5rem;
+                background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+                border: none;
+                border-radius: 25px;
+                color: white;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+    
+            .newsletter-form button::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                transition: left 0.3s ease;
+            }
+    
+            .newsletter-form button:hover::before {
+                left: 100%;
+            }
+    
+            .footer-bottom {
+                text-align: center;
+                padding: 2rem;
+                margin-top: 3rem;
+                background: rgba(0, 0, 0, 0.2);
+                position: relative;
+            }
+    
+            .footer-bottom::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                height: 1px;
+                background: linear-gradient(90deg, 
+                    transparent, 
+                    rgba(255, 255, 255, 0.1),
+                    rgba(255, 255, 255, 0.2),
+                    rgba(255, 255, 255, 0.1),
+                    transparent
+                );
+            }
+    
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+    
+            .feature-item {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.5rem;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+    
+            .feature-item:hover {
+                background: rgba(255, 255, 255, 0.1);
+                transform: translateX(5px);
+            }
+    
+            .feature-item i {
+                color: var(--secondary-color);
+            }
+    
+            .download-buttons {
+                display: flex;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+    
+            .download-button {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.8rem 1.2rem;
+                border-radius: 5px;
+                background: rgba(255, 255, 255, 0.1);
+                color: var(--text-color);
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+    
+            .download-button:hover {
+                background: var(--secondary-color);
+                transform: translateY(-3px);
+            }
+    
+            @media (max-width: 768px) {
+                .footer-content {
+                    grid-template-columns: 1fr;
+                }
+    
+                .footer-section {
+                    text-align: center;
+                }
+    
+                .footer-section h3::before {
+                    left: 50%;
+                    transform: translateX(-50%) scaleX(0);
+                }
+    
+                .footer-section:hover h3::before {
+                    transform: translateX(-50%) scaleX(1);
+                }
+    
+                .social-links {
+                    justify-content: center;
+                }
+    
+                .newsletter-form {
+                    flex-direction: column;
+                }
+    
+                .contact-info {
+                    justify-content: center;
+                }
+    
+                .download-buttons {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <footer class="footer">
+            <div class="footer-content">
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>About Company</h3>
+                    <p>Leading the way in innovative solutions for a digital future. We're committed to excellence and customer satisfaction.</p>
+                </div>
+    
+                <!-- Services Section -->
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">Cloud Solutions</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">IT Consulting</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Quick Links Section -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Pricing Plans</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">System Status</a></li>
+                        <li><a href="#">Community Forums</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Section -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (234) 567-8900</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <p>contact@example.com</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Business Avenue, New York, NY 10001</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-clock"></i>
+                        <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+    
+               
+    
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
